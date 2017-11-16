@@ -6,14 +6,23 @@ type FizzBuzz struct {
 }
 
 func (FizzBuzz) show(number int) string {
-	if number%3 == 0 && number%5 == 0 {
+	isFizzBuzz := number%3 == 0 && number%5 == 0
+	if isFizzBuzz {
 		return "FizzBuzz"
 	}
-	if number%3 == 0 {
+	if isFizz(number) {
 		return "Fizz"
 	}
-	if number%5 == 0 {
+	if isBuzz(number) {
 		return "Buzz"
 	}
 	return strconv.Itoa(number)
+}
+
+func isFizz(number int) bool {
+	return number%3 == 0
+}
+
+func isBuzz(number int) bool {
+	return number%5 == 0
 }
