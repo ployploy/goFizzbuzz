@@ -39,3 +39,12 @@ func TestInput4_output4(t *testing.T) {
 		t.Fatal("Expected ", expected, " but actual ", result)
 	}
 }
+
+func TestInput5_outputBuzz(t *testing.T) {
+	fizzbuzz := FizzBuzz{}
+	result := fizzbuzz.show(5)
+	expected := "Buzz"
+	if result != expected {
+		t.Fatal("Expected ", expected, " but actual ", result)
+	}
+}
